@@ -4,6 +4,7 @@ import {
 } from "@clerk/nextjs";
 import { Noto_Sans_Display } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +22,14 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={noto.className}>
-          {children}
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
