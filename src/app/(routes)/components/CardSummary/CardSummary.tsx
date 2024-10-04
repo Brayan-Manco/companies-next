@@ -1,4 +1,4 @@
-import { CustonIcon } from '@/components/CustomIcon'
+import { CustomIcon } from '@/components/CustomIcon'
 import { CarsSummaRyProps } from './CardSummary.types'
 import { CustomTooltip } from '@/components/CustomTooltip'
 import { cn } from '@/lib/utils'
@@ -12,7 +12,7 @@ export const CardSummary = (Props: CarsSummaRyProps) => {
     <div className='shadow-sm bg-background rounded p-5 py-3 hover:shadow-lg transition'>
       <div className='flex justify-between'>
         <div className='flex gap-2 items-center'>
-          <CustonIcon icon={Icon}/>
+          <CustomIcon icon={Icon}/>
           {title}
         </div>
         <CustomTooltip content={tooltipText} />
